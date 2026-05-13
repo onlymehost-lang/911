@@ -8,6 +8,8 @@ dist/
 build/
 *.min.js
 *.min.css
+.next/
+out/
 
 # Vercel
 .vercel/

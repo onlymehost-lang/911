@@ -2,13 +2,22 @@
   "name": "911-cyber-emergency",
   "version": "1.0.0",
   "description": "911 Cyber Emergency — Immediate Expert Incident Response",
-  "main": "911cyber-v2-FULL.html",
   "scripts": {
-    "build": "npm run validate",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
     "validate": "node scripts/validate.js",
-    "dev": "python3 -m http.server 8000",
-    "start": "npm run dev",
-    "vercel-build": "npm run build && npm run validate"
+    "vercel-build": "next build && npm run validate"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.49.0",
+    "eslint-config-next": "^14.0.0"
   },
   "keywords": [
     "cyber-security",

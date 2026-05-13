@@ -1,17 +1,20 @@
 {
   "version": 2,
-  "public": true,
-  "buildCommand": "npm run build",
-  "devCommand": "python3 -m http.server 3000",
-  "env": {
-    "NODE_ENV": "production"
-  },
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/911cyber-v2-FULL.html"
+      "dest": "/$1"
     }
   ],
+  "env": {
+    "NODE_ENV": "production"
+  },
   "headers": [
     {
       "source": "/(.*)",
