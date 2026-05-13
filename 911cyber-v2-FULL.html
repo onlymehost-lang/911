@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>911 Cyber Emergency — Immediate Expert Incident Response</title>
+<meta name="description" content="Hacked? Scammed? Every second counts. Speak to a cyber incident response specialist in minutes. Real experts. Rapid response. Confidential.">
+<meta property="og:title" content="911 Cyber Emergency — Get Immediate Help Now">
+<meta property="og:description" content="Account hacked, crypto scam, or social engineering attack? Expert help in minutes.">
+
+<!-- ══════════════════════════════════════════════════
+     REPLACE BEFORE GOING LIVE:
+     YOUR_PIXEL_ID       → Meta Pixel ID
+     AW-CONVERSION_ID    → Google Ads ID
+     AW-CONVERSION_LABEL → Google Ads Label
+     YOUR_FORM_ID        → Formspree Form ID
+     234XXXXXXXXXX       → WhatsApp number (no + sign)
+     YOUR_TAWKTO_ID      → Tawk.to property ID
+     YOUR_TAWKTO_WIDGET  → Tawk.to widget ID
+══════════════════════════════════════════════════ -->
+
+<!-- Meta Pixel -->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','YOUR_PIXEL_ID');fbq('track','PageView');</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+
+<!-- Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-CONVERSION_ID');</script>
+
+<!-- Fonts: Bebas Neue (impact headlines) + Outfit (body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ══ DESIGN TOKENS ══ */
+:root{
+  --red:#e11d27;--red2:#b91c1c;--red3:rgba(225,29,39,0.12);--red4:rgba(225,29,39,0.3);
+  --gold:#f59e0b;--gold2:rgba(245,158,11,0.15);
+  --bg:#06090d;--bg2:#0a0f16;--bg3:#0f1923;--bg4:#141f2b;
+  --border:#162030;--border2:#1e2f42;
+  --text:#dde6f0;--muted:#5a7a95;--muted2:#2c4258;
+  --white:#ffffff;
+  --fh:'Bebas Neue',sans-serif;
+  --fb:'Outfit',sans-serif;
+  --r:10px;--rl:16px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--fb);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+
+/* ══ SCROLLBAR ══ */
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--red2);border-radius:2px;}
+
+/* ══ ANIMATIONS ══ */
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.7);}}
+@keyframes scanline{0%{transform:translateY(-100%);}100%{transform:translateY(100vh);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes glow{0%,100%{box-shadow:0 0 20px rgba(225,29,39,.3);}50%{box-shadow:0 0 40px rgba(225,29,39,.6);}}
+@keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+@keyframes flicker{0%,19%,21%,23%,25%,54%,56%,100%{opacity:1;}20%,24%,55%{opacity:.4;}}
+
+/* ══ EMERGENCY TICKER ══ */
+.ticker-wrap{background:var(--red2);overflow:hidden;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1);}
+.ticker-inner{display:flex;white-space:nowrap;animation:ticker 28s linear infinite;}
+.ticker-inner span{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#fff;padding:0 32px;}
+.ticker-sep{color:rgba(255,255,255,.4);}
+
+/* ══ TOPBAR ══ */
+.topbar{position:sticky;top:0;z-index:200;background:rgba(6,9,13,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:58px;}
+.logo{font-family:var(--fh);font-size:20px;color:var(--white);display:flex;align-items:center;gap:10px;letter-spacing:.04em;}
+.logo-badge{background:var(--red);color:#fff;font-size:9px;font-weight:600;padding:2px 8px;border-radius:4px;letter-spacing:.1em;}
+.nav-cta{background:var(--red);color:#fff;border:none;border-radius:var(--r);padding:9px 22px;font-family:var(--fb);font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;gap:7px;animation:glow 2.5s ease-in-out infinite;}
+.nav-cta:hover{background:var(--red2);transform:translateY(-1px);}
+.live-dot{width:7px;height:7px;border-radius:50%;background:#4ade80;animation:pulse 1.2s ease-in-out infinite;flex-shrink:0;}
+
+/* ══ HERO ══ */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:100px 24px 80px;}
+/* Dramatic background */
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 90% 70% at 50% -10%,rgba(225,29,39,.18) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 100% 100%,rgba(245,158,11,.06) 0%,transparent 50%),linear-gradient(180deg,#06090d 0%,#080d13 100%);}
+/* Grid overlay */
+.hero-bg::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,black 30%,transparent 100%);}
+/* Scanline effect */
+.scanline{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(transparent,rgba(225,29,39,.15),transparent);animation:scanline 6s linear infinite;z-index:1;pointer-events:none;}
+.hero-inner{position:relative;z-index:2;max-width:820px;margin:0 auto;text-align:center;}
+
+/* Staggered reveal */
+.reveal{opacity:0;animation:fadeUp .7s ease forwards;}
+.r1{animation-delay:.1s;} .r2{animation-delay:.25s;} .r3{animation-delay:.4s;} .r4{animation-delay:.55s;} .r5{animation-delay:.7s;}
+
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(225,29,39,.1);border:1px solid rgba(225,29,39,.35);color:#ff7070;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:24px;}
+.pulse-dot{width:6px;height:6px;border-radius:50%;background:#ff3333;animation:pulse 1.2s ease-in-out infinite;}
+
+/* GEO dynamic headline — JS fills [LOCATION] */
+.hero h1{font-family:var(--fh);font-size:clamp(48px,10vw,100px);line-height:.95;color:var(--white);margin-bottom:8px;letter-spacing:.02em;animation:flicker 5s linear 2s 1;}
+.hero h1 .red{color:var(--red);}
+.hero h1 .outline{-webkit-text-stroke:2px var(--white);color:transparent;}
+.hero h1 .outline.red{-webkit-text-stroke:2px var(--red);color:transparent;}
+
+.hero-sub{font-size:clamp(15px,2.2vw,18px);color:var(--muted);max-width:560px;margin:16px auto 36px;line-height:1.75;font-weight:300;}
+.hero-sub strong{color:var(--text);font-weight:500;}
+
+.cta-stack{display:flex;flex-direction:column;align-items:center;gap:14px;}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-primary{background:var(--red);color:#fff;border:none;border-radius:var(--r);padding:17px 36px;font-family:var(--fb);font-size:16px;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;gap:8px;position:relative;overflow:hidden;}
+.btn-primary::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);transform:translateX(-100%);transition:transform .4s;}
+.btn-primary:hover::after{transform:translateX(100%);}
+.btn-primary:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 8px 30px rgba(225,29,39,.4);}
+.btn-outline{background:transparent;color:var(--white);border:1px solid var(--border2);border-radius:var(--r);padding:16px 32px;font-family:var(--fb);font-size:15px;font-weight:500;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
+.btn-outline:hover{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.04);}
+.btn-gold{background:var(--gold);color:#000;border:none;border-radius:var(--r);padding:17px 36px;font-family:var(--fb);font-size:16px;font-weight:700;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
+.btn-gold:hover{background:#d97706;transform:translateY(-2px);}
+.cta-hint{font-size:12px;color:var(--muted2);display:flex;align-items:center;gap:20px;}
+.cta-hint span{display:flex;align-items:center;gap:5px;}
+
+/* Trust strip */
+.trust-row{display:flex;justify-content:center;gap:32px;margin-top:48px;flex-wrap:wrap;padding-top:40px;border-top:1px solid var(--border);}
+.trust-pill{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);font-weight:400;}
+.trust-pill svg{flex-shrink:0;}
+
+/* ══ SECTION BASICS ══ */
+section{padding:80px 24px;}
+.inner{max-width:960px;margin:0 auto;}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:10px;}
+.sec-h{font-family:var(--fh);font-size:clamp(32px,5vw,54px);color:var(--white);line-height:1.05;margin-bottom:14px;}
+.sec-p{font-size:16px;color:var(--muted);max-width:560px;line-height:1.8;font-weight:300;}
+
+/* ══ PROBLEM SECTION ══ */
+.problem-bg{background:var(--bg);}
+.problem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2px;margin-top:40px;border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;}
+.pcard{background:var(--bg2);padding:28px 24px;transition:background .25s,border-color .25s;cursor:default;border:1px solid transparent;}
+.pcard:hover{background:var(--bg3);border-color:var(--red4);}
+.pcard-icon{width:44px;height:44px;border-radius:10px;background:var(--red3);border:1px solid var(--red4);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.pcard h3{font-size:15px;font-weight:600;color:var(--white);margin-bottom:7px;}
+.pcard p{font-size:13px;color:var(--muted);line-height:1.65;}
+
+/* ══ URGENCY BANNER ══ */
+.urgency{background:linear-gradient(135deg,#3b0000 0%,#7f1d1d 50%,#3b0000 100%);border-top:1px solid #b91c1c;border-bottom:1px solid #b91c1c;padding:52px 24px;text-align:center;position:relative;overflow:hidden;}
+.urgency::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.015) 0px,rgba(255,255,255,.015) 1px,transparent 1px,transparent 12px);}
+.urgency h2{font-family:var(--fh);font-size:clamp(36px,7vw,72px);color:#fff;letter-spacing:.04em;margin-bottom:12px;position:relative;}
+.urgency p{font-size:16px;color:rgba(255,255,255,.7);margin:0 auto 28px;max-width:540px;position:relative;line-height:1.7;}
+.urgency-points{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-bottom:32px;position:relative;}
+.upt{display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.85);}
+.upt-check{width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+
+/* ══ SERVICES / WHAT WE DO ══ */
+.services-bg{background:var(--bg2);}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:40px;}
+.scard{background:var(--bg3);border:1px solid var(--border);border-radius:var(--rl);padding:28px 24px;transition:all .25s;position:relative;overflow:hidden;}
+.scard::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transition:transform .3s;transform-origin:left;}
+.scard:hover{border-color:var(--border2);transform:translateY(-3px);}
+.scard:hover::after{transform:scaleX(1);}
+.scard-icon{font-size:28px;margin-bottom:16px;}
+.scard h3{font-size:15px;font-weight:600;color:var(--white);margin-bottom:8px;}
+.scard p{font-size:13px;color:var(--muted);line-height:1.7;}
+
+/* ══ HOW IT WORKS ══ */
+.steps-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px;position:relative;}
+.steps-row::before{content:'';position:absolute;top:26px;left:calc(16.66% + 20px);right:calc(16.66% + 20px);height:1px;background:linear-gradient(90deg,var(--red4),var(--red4));z-index:0;}
+.step-card{background:var(--bg3);border:1px solid var(--border);padding:30px 22px;text-align:center;position:relative;z-index:1;}
+.step-card:first-child{border-radius:var(--rl) 0 0 var(--rl);}
+.step-card:last-child{border-radius:0 var(--rl) var(--rl) 0;border-left:none;}
+.step-card:nth-child(2){border-left:none;border-right:none;}
+.step-n{width:44px;height:44px;border-radius:50%;background:var(--red3);border:1px solid var(--red4);color:#ff7070;font-family:var(--fh);font-size:20px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+.step-card h3{font-size:15px;font-weight:600;color:var(--white);margin-bottom:8px;}
+.step-card p{font-size:13px;color:var(--muted);line-height:1.65;}
+
+/* ══ PRICING TIERS ══ */
+.pricing-bg{background:var(--bg);}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:40px;}
+.pricetier{background:var(--bg3);border:1px solid var(--border);border-radius:var(--rl);padding:32px 28px;position:relative;transition:all .25s;}
+.pricetier.featured{border-color:var(--red);background:linear-gradient(160deg,#1a0a0a 0%,var(--bg3) 60%);}
+.pricetier.featured::before{content:'MOST POPULAR';position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--red);color:#fff;font-size:10px;font-weight:700;letter-spacing:.1em;padding:4px 16px;border-radius:0 0 8px 8px;}
+.pricetier:hover{transform:translateY(-4px);}
+.tier-label{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+.tier-name{font-family:var(--fh);font-size:26px;color:var(--white);margin-bottom:6px;}
+.tier-price{font-size:13px;color:var(--muted);margin-bottom:20px;}
+.tier-price strong{font-size:32px;color:var(--white);font-weight:600;}
+.tier-divider{height:1px;background:var(--border);margin:20px 0;}
+.tier-features{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px;}
+.tier-features li{font-size:13px;color:var(--muted);display:flex;align-items:flex-start;gap:9px;line-height:1.5;}
+.tier-features li::before{content:'';width:14px;height:14px;border-radius:50%;background:var(--red3);border:1px solid var(--red4);flex-shrink:0;margin-top:1px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M1 4l2 2 4-4' stroke='%23ff6b6b' stroke-width='1.3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;}
+
+/* ══ FAQ ══ */
+.faq-bg{background:var(--bg2);}
+.faq-list{display:flex;flex-direction:column;gap:2px;margin-top:40px;}
+.faq-item{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:border-color .2s;}
+.faq-item.open{border-color:var(--border2);}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;cursor:pointer;font-size:15px;font-weight:500;color:var(--text);gap:16px;user-select:none;}
+.faq-q:hover{color:var(--white);}
+.faq-icon{width:24px;height:24px;border-radius:50%;background:var(--bg2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .3s,background .2s;}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--red3);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;}
+.faq-item.open .faq-a{max-height:300px;}
+.faq-a-inner{padding:0 24px 20px;font-size:14px;color:var(--muted);line-height:1.75;border-top:1px solid var(--border);}
+
+/* ══ FORM SECTION ══ */
+.form-section{background:var(--bg);padding:80px 24px;}
+.form-wrap{max-width:980px;margin:0 auto;display:grid;grid-template-columns:1fr 1.35fr;gap:60px;align-items:start;}
+.form-left .reassure{display:flex;flex-direction:column;gap:14px;margin-top:28px;}
+.reassure-item{display:flex;align-items:flex-start;gap:12px;}
+.reassure-icon{width:32px;height:32px;border-radius:8px;background:var(--red3);border:1px solid var(--red4);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.reassure-text h4{font-size:13px;font-weight:600;color:var(--white);margin-bottom:2px;}
+.reassure-text p{font-size:12px;color:var(--muted);line-height:1.6;}
+
+.form-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--rl);padding:32px;position:relative;overflow:hidden;}
+.form-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),#ff6b6b,var(--red));}
+.form-header{margin-bottom:24px;}
+.form-header h2{font-family:var(--fh);font-size:26px;color:var(--white);margin-bottom:6px;}
+.form-header p{font-size:13px;color:var(--muted);}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.field{display:flex;flex-direction:column;gap:6px;}
+.field.full{grid-column:1/-1;}
+.field label{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);}
+.field input,.field select,.field textarea{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);color:var(--text);font-size:14px;font-family:var(--fb);padding:11px 14px;outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none;width:100%;}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(225,29,39,.1);}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a7a95' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px;}
+.field select option{background:#0f1923;}
+.field textarea{resize:vertical;min-height:88px;line-height:1.6;}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.check-item{display:flex;align-items:center;gap:8px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:10px 12px;font-size:12px;color:var(--muted);cursor:pointer;transition:border-color .2s;}
+.check-item:hover{border-color:var(--border2);}
+.check-item input[type=checkbox]{accent-color:var(--red);width:13px;height:13px;flex-shrink:0;}
+.urgency-select-hint{font-size:11px;color:var(--red);margin-top:4px;display:none;}
+#timing:has(option[value="now"]:checked) + .urgency-select-hint{display:block;}
+.btn-submit{width:100%;background:var(--red);color:#fff;border:none;border-radius:var(--r);padding:16px;font-family:var(--fb);font-size:16px;font-weight:700;cursor:pointer;margin-top:12px;transition:all .2s;letter-spacing:.01em;position:relative;overflow:hidden;}
+.btn-submit::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);transform:translateX(-100%);transition:transform .5s;}
+.btn-submit:hover::after{transform:translateX(100%);}
+.btn-submit:hover{background:var(--red2);transform:translateY(-1px);box-shadow:0 6px 24px rgba(225,29,39,.4);}
+.form-note{font-size:11px;color:var(--muted2);text-align:center;margin-top:12px;line-height:1.7;}
+.form-success{display:none;text-align:center;padding:20px 0;}
+.success-ico{width:56px;height:56px;border-radius:50%;background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+.form-success h3{font-family:var(--fh);font-size:24px;color:var(--white);margin-bottom:8px;}
+.form-success p{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.7;}
+
+/* ══ DISCLAIMER ══ */
+.disclaimer-section{background:var(--bg2);padding:48px 24px;}
+.dbox{max-width:720px;margin:0 auto;background:var(--bg);border:1px solid var(--border);border-radius:var(--rl);padding:28px 32px;}
+.dbox h3{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+.dbox ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.dbox li{font-size:13px;color:var(--muted2);padding-left:18px;position:relative;line-height:1.65;}
+.dbox li::before{content:'—';position:absolute;left:0;color:var(--muted2);}
+
+/* ══ FOOTER ══ */
+footer{background:var(--bg);border-top:1px solid var(--border);padding:28px 24px;text-align:center;}
+footer p{font-size:12px;color:var(--muted2);}
+
+/* ══ FLOATING WHATSAPP ══ */
+.wa-btn{position:fixed;bottom:88px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);text-decoration:none;transition:all .2s;}
+.wa-btn:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.5);}
+.wa-btn svg{width:30px;height:30px;fill:white;}
+.wa-label{position:absolute;right:64px;background:#111827;color:#fff;font-size:12px;font-weight:500;padding:6px 12px;border-radius:8px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;}
+.wa-btn:hover .wa-label{opacity:1;}
+
+/* ══ MOBILE STICKY ══ */
+.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:998;background:rgba(6,9,13,.97);border-top:1px solid var(--border);padding:12px 16px 16px;}
+@media(max-width:640px){.sticky-bar{display:block;}}
+.sticky-bar a{display:block;background:var(--red);color:#fff;text-align:center;border-radius:var(--r);padding:14px;font-size:15px;font-weight:700;text-decoration:none;font-family:var(--fb);}
+
+/* ══ EXIT POPUP ══ */
+.overlay{display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.8);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:24px;}
+.overlay.active{display:flex;}
+.popup{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--rl);padding:36px 32px;max-width:420px;width:100%;text-align:center;position:relative;}
+.popup::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),#ff6b6b,var(--red));border-radius:var(--rl) var(--rl) 0 0;}
+.popup-x{position:absolute;top:14px;right:16px;background:none;border:none;color:var(--muted);font-size:22px;cursor:pointer;line-height:1;}
+.popup h2{font-family:var(--fh);font-size:28px;color:var(--white);margin-bottom:10px;}
+.popup p{font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.7;}
+.popup-actions{display:flex;flex-direction:column;gap:10px;}
+
+/* ══ RESPONSIVE ══ */
+@media(max-width:768px){
+  .form-wrap{grid-template-columns:1fr;gap:36px;}
+  .form-grid{grid-template-columns:1fr;}
+  .steps-row{grid-template-columns:1fr;}
+  .step-card:first-child{border-radius:var(--rl) var(--rl) 0 0;}
+  .step-card:last-child{border-radius:0 0 var(--rl) var(--rl);border-left:1px solid var(--border);border-top:none;}
+  .step-card:nth-child(2){border-left:1px solid var(--border);border-right:1px solid var(--border);border-top:none;border-bottom:none;}
+  .steps-row::before{display:none;}
+  .hero h1{font-size:clamp(44px,13vw,80px);}
+}
+@media(max-width:480px){
+  .checks{grid-template-columns:1fr;}
+  .urgency-points{flex-direction:column;align-items:center;}
+  .cta-hint{flex-direction:column;gap:8px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ TICKER ══ -->
+<div class="ticker-wrap" role="marquee" aria-label="Live emergency alerts">
+  <div class="ticker-inner">
+    <span>🚨 CYBER EMERGENCY RESPONSE ACTIVE</span><span class="ticker-sep">•</span>
+    <span>ACCOUNT TAKEOVERS — ACT IMMEDIATELY</span><span class="ticker-sep">•</span>
+    <span>CRYPTO SCAM VICTIM? SPEAK TO AN EXPERT NOW</span><span class="ticker-sep">•</span>
+    <span>EMAIL COMPROMISE — EVERY SECOND COUNTS</span><span class="ticker-sep">•</span>
+    <span>IMPERSONATION ATTACK — CONTAIN THE DAMAGE NOW</span><span class="ticker-sep">•</span>
+    <!-- duplicate for seamless loop -->
+    <span>🚨 CYBER EMERGENCY RESPONSE ACTIVE</span><span class="ticker-sep">•</span>
+    <span>ACCOUNT TAKEOVERS — ACT IMMEDIATELY</span><span class="ticker-sep">•</span>
+    <span>CRYPTO SCAM VICTIM? SPEAK TO AN EXPERT NOW</span><span class="ticker-sep">•</span>
+    <span>EMAIL COMPROMISE — EVERY SECOND COUNTS</span><span class="ticker-sep">•</span>
+    <span>IMPERSONATION ATTACK — CONTAIN THE DAMAGE NOW</span><span class="ticker-sep">•</span>
+  </div>
+</div>
+
+<!-- ══ TOPBAR ══ -->
+<nav class="topbar">
+  <div class="logo">
+    <span>911 CYBER EMERGENCY</span>
+    <span class="logo-badge">LIVE</span>
+  </div>
+  <a href="#form" class="nav-cta"><span class="live-dot"></span> Get Help Now</a>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-bg"><div class="scanline"></div></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow reveal r1"><span class="pulse-dot"></span>Emergency Response Available Now</div>
+    <!-- JS replaces [LOCATION] with detected country -->
+    <h1 class="reveal r2">
+      CYBER<br>
+      <span class="red">ATTACK</span><br>
+      <span class="outline" id="heroGeo">IN PROGRESS?</span>
+    </h1>
+    <p class="hero-sub reveal r3">
+      Hacked account, crypto scam, or social engineering attack?<br>
+      <strong>Speak to a real expert in minutes — not days.</strong><br>
+      Every minute of delay makes recovery harder.
+    </p>
+    <div class="cta-stack reveal r4">
+      <div class="cta-row">
+        <a href="#form" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1l1.8 5.4H16l-4.8 3.5 1.8 5.4L8 12l-5 3.3 1.8-5.4L0 6.4h6.2L8 1z" fill="white"/></svg>
+          Start Emergency Response
+        </a>
+        <!-- Replace 234XXXXXXXXXX with your WhatsApp number -->
+        <a href="https://wa.me/234XXXXXXXXXX?text=Hi%2C%20I%20need%20urgent%20cyber%20emergency%20help" target="_blank" class="btn-outline">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1C4.13 1 1 4.13 1 8c0 1.23.32 2.4.88 3.4L1 15l3.72-.86A7 7 0 108 1z" stroke="#dde6f0" stroke-width="1.3"/><path d="M5.5 7.5c.5 1 1.5 2 2.5 2.5" stroke="#dde6f0" stroke-width="1.3" stroke-linecap="round"/></svg>
+          Speak on WhatsApp
+        </a>
+      </div>
+      <div class="cta-hint">
+        <span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#5a7a95" stroke-width="1.1"/><path d="M6 3v3.5l2 1" stroke="#5a7a95" stroke-width="1.1" stroke-linecap="round"/></svg>
+          Response in minutes during active hours
+        </span>
+        <span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1L1.5 3v4c0 2.5 1.8 4.3 4.5 5 2.7-.7 4.5-2.5 4.5-5V3L6 1z" stroke="#5a7a95" stroke-width="1.1"/></svg>
+          100% confidential
+        </span>
+        <span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l2.5 2.5L10 3.5" stroke="#5a7a95" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          No automated bots — real specialists
+        </span>
+      </div>
+    </div>
+    <div class="trust-row reveal r5">
+      <div class="trust-pill"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1L1.5 3.5V7.5c0 3 2.2 5 5.5 6 3.3-1 5.5-3 5.5-6V3.5L7 1z" stroke="#2c4258" stroke-width="1.2"/></svg>Confidential process</div>
+      <div class="trust-pill"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="#2c4258" stroke-width="1.2"/><path d="M7 3.5V7l2.5 1.5" stroke="#2c4258" stroke-width="1.2" stroke-linecap="round"/></svg>Rapid response</div>
+      <div class="trust-pill"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="#2c4258" stroke-width="1.2"/><path d="M1.5 7h11M7 1.5c-1.8 2-1.8 7 0 11M7 1.5c1.8 2 1.8 7 0 11" stroke="#2c4258" stroke-width="1.2"/></svg>Global support</div>
+      <div class="trust-pill"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4h10v6a1 1 0 01-1 1H3a1 1 0 01-1-1V4z" stroke="#2c4258" stroke-width="1.2"/><path d="M2 4l5 4.5L12 4" stroke="#2c4258" stroke-width="1.2" stroke-linecap="round"/></svg>Transparent — no false promises</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROBLEM SECTION ══ -->
+<section class="problem-bg">
+  <div class="inner">
+    <p class="eyebrow">You are not alone</p>
+    <h2 class="sec-h">Is this happening to you right now?</h2>
+    <p class="sec-p">These situations are time-critical. Every delay increases damage. Recognize your situation below.</p>
+    <div class="problem-grid">
+      <div class="pcard">
+        <div class="pcard-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="9" width="14" height="9" rx="2" stroke="#ff6b6b" stroke-width="1.4"/><path d="M7 9V6a3 3 0 016 0v3" stroke="#ff6b6b" stroke-width="1.4" stroke-linecap="round"/><circle cx="10" cy="13.5" r="1.2" fill="#ff6b6b"/></svg></div>
+        <h3>Account takeover</h3>
+        <p>Instagram, Facebook, WhatsApp, TikTok, or email hijacked. Someone is impersonating you or locking you out right now.</p>
+      </div>
+      <div class="pcard">
+        <div class="pcard-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L3 5.5v6c0 4 2.8 6.5 7 7.5 4.2-1 7-3.5 7-7.5v-6L10 2z" stroke="#ff6b6b" stroke-width="1.4"/><path d="M7 10l2.5 2.5L13 8" stroke="#ff6b6b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Crypto scam</h3>
+        <p>Sent funds to a fake investment platform, romance scam, or phishing trap. Panic is normal — but speed is critical.</p>
+      </div>
+      <div class="pcard">
+        <div class="pcard-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 6h14v10a1 1 0 01-1 1H4a1 1 0 01-1-1V6z" stroke="#ff6b6b" stroke-width="1.4"/><path d="M3 6l7 6 7-6M1 4h18" stroke="#ff6b6b" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        <h3>Business email compromise</h3>
+        <p>Work email hacked, fraudulent wire initiated, or someone impersonating your company to clients or suppliers.</p>
+      </div>
+      <div class="pcard">
+        <div class="pcard-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="7" r="3.5" stroke="#ff6b6b" stroke-width="1.4"/><path d="M3.5 18c0-3.5 2.9-6.5 6.5-6.5s6.5 3 6.5 6.5" stroke="#ff6b6b" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        <h3>Impersonation attack</h3>
+        <p>Someone is posing as you online, targeting your contacts, running scams in your name, or damaging your reputation.</p>
+      </div>
+      <div class="pcard">
+        <div class="pcard-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2" stroke="#ff6b6b" stroke-width="1.4"/><path d="M6 8h8M6 12h5" stroke="#ff6b6b" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        <h3>Phishing / social engineering</h3>
+        <p>You clicked a suspicious link, gave credentials unknowingly, or realized a call or message was a scam after the fact.</p>
+      </div>
+      <div class="pcard">
+        <div class="pcard-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2v7M10 13v5M2 10h5M13 10h5" stroke="#ff6b6b" stroke-width="1.4" stroke-linecap="round"/><circle cx="10" cy="10" r="3" stroke="#ff6b6b" stroke-width="1.4"/></svg></div>
+        <h3>Ransomware / business lockout</h3>
+        <p>Systems encrypted, admin access revoked, or payment demands issued. Business continuity is at immediate risk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ URGENCY BANNER ══ -->
+<div class="urgency">
+  <h2>EVERY MINUTE MATTERS</h2>
+  <p>Cybercriminals move fast and methodically. The first hours after an incident determine how much can be recovered. Don't let hesitation cost you everything.</p>
+  <div class="urgency-points">
+    <div class="upt"><div class="upt-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5L8.5 2" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Reduce financial loss</div>
+    <div class="upt"><div class="upt-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5L8.5 2" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Increase recovery chances</div>
+    <div class="upt"><div class="upt-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5L8.5 2" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Prevent further damage</div>
+    <div class="upt"><div class="upt-check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5L8.5 2" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Stop impersonation spread</div>
+  </div>
+  <a href="#form" class="btn-gold">Get Immediate Help Now →</a>
+</div>
+
+<!-- ══ WHAT WE DO ══ -->
+<section class="services-bg">
+  <div class="inner">
+    <p class="eyebrow">What we do</p>
+    <h2 class="sec-h">Immediate cyber incident response</h2>
+    <p class="sec-p">Our team helps individuals and businesses respond to active cyber incidents — in real time, not via ticket queue.</p>
+    <div class="services-grid">
+      <div class="scard">
+        <div class="scard-icon">🔐</div>
+        <h3>Account recovery guidance</h3>
+        <p>Step-by-step expert guidance to regain access to compromised social media, email, and business platform accounts.</p>
+      </div>
+      <div class="scard">
+        <div class="scard-icon">🔍</div>
+        <h3>Scam analysis & tracing</h3>
+        <p>Investigate how the attack occurred, trace scam activity, and identify what was exposed or stolen.</p>
+      </div>
+      <div class="scard">
+        <div class="scard-icon">🛡️</div>
+        <h3>Containment & damage control</h3>
+        <p>Immediate steps to contain the breach, prevent further access, and stop the attack from spreading.</p>
+      </div>
+      <div class="scard">
+        <div class="scard-icon">📋</div>
+        <h3>Incident documentation</h3>
+        <p>Professional documentation of the incident for platform appeals, insurance claims, or law enforcement reports.</p>
+      </div>
+      <div class="scard">
+        <div class="scard-icon">💬</div>
+        <h3>Real-time expert guidance</h3>
+        <p>Live consultation via call or chat — a real specialist walks you through every step, no scripts, no bots.</p>
+      </div>
+      <div class="scard">
+        <div class="scard-icon">🔄</div>
+        <h3>Post-incident hardening</h3>
+        <p>After the crisis: securing your accounts, enabling proper protections, and ensuring it doesn't happen again.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ══ -->
+<section style="background:var(--bg);padding:80px 24px;">
+  <div class="inner">
+    <p class="eyebrow">Process</p>
+    <h2 class="sec-h">Three steps from crisis to control</h2>
+    <p class="sec-p">No long queues. No automated responses. Just immediate, structured expert action.</p>
+    <div class="steps-row">
+      <div class="step-card">
+        <div class="step-n">1</div>
+        <h3>Describe your situation</h3>
+        <p>Fill in the secure emergency form below. Takes under 90 seconds. Include timing, affected accounts, and what happened.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-n">2</div>
+        <h3>Speak to a specialist</h3>
+        <p>A qualified cyber incident responder reviews your case and contacts you immediately via call, chat, or WhatsApp.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-n">3</div>
+        <h3>Response begins</h3>
+        <p>Real-time guided intervention — contain, secure, recover. We stay with you until the situation is stabilized.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRICING ══ -->
+<section class="pricing-bg" id="pricing">
+  <div class="inner">
+    <p class="eyebrow">Response plans</p>
+    <h2 class="sec-h">Choose your level of support</h2>
+    <p class="sec-p">Transparent pricing. No hidden fees. We tell you exactly what is covered before you commit.</p>
+    <div class="pricing-grid">
+      <div class="pricetier">
+        <p class="tier-label">Tier 1</p>
+        <h3 class="tier-name">Emergency Assessment</h3>
+        <p class="tier-price">Starting at <strong>$</strong> — contact for pricing</p>
+        <div class="tier-divider"></div>
+        <ul class="tier-features">
+          <li>Initial incident assessment (30 min)</li>
+          <li>Situation diagnosis & risk evaluation</li>
+          <li>Immediate containment checklist</li>
+          <li>Recommended next steps report</li>
+          <li>Follow-up support (24h)</li>
+        </ul>
+        <a href="#form" class="btn-outline" style="width:100%;justify-content:center;display:flex;">Get Started</a>
+      </div>
+      <div class="pricetier featured">
+        <p class="tier-label">Tier 2</p>
+        <h3 class="tier-name">Active Incident Response</h3>
+        <p class="tier-price">Starting at <strong>$$</strong> — contact for pricing</p>
+        <div class="tier-divider"></div>
+        <ul class="tier-features">
+          <li>Everything in Tier 1</li>
+          <li>Live guided account recovery</li>
+          <li>Real-time scam tracing support</li>
+          <li>Platform reporting & appeals drafting</li>
+          <li>Incident documentation package</li>
+          <li>72-hour follow-up support</li>
+        </ul>
+        <a href="#form" class="btn-primary" style="width:100%;justify-content:center;display:flex;">Start Now</a>
+      </div>
+      <div class="pricetier">
+        <p class="tier-label">Tier 3</p>
+        <h3 class="tier-name">Priority Response</h3>
+        <p class="tier-price">Starting at <strong>$$$</strong> — contact for pricing</p>
+        <div class="tier-divider"></div>
+        <ul class="tier-features">
+          <li>Everything in Tier 2</li>
+          <li>Dedicated specialist assigned</li>
+          <li>Priority queue — response under 15 min</li>
+          <li>Business continuity support</li>
+          <li>Law enforcement liaison assistance</li>
+          <li>7-day post-incident monitoring</li>
+          <li>Full security hardening session</li>
+        </ul>
+        <a href="#form" class="btn-outline" style="width:100%;justify-content:center;display:flex;">Contact Us</a>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--muted2);text-align:center;margin-top:20px;">Final pricing disclosed during consultation. No commitment required to speak to a specialist.</p>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="faq-bg" id="faq">
+  <div class="inner">
+    <p class="eyebrow">Common questions</p>
+    <h2 class="sec-h">What you need to know</h2>
+    <p class="sec-p">Honest answers. No marketing spin. We believe transparency builds trust.</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Can you guarantee I'll get my account or money back?<div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#5a7a95" stroke-width="1.5" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-a"><div class="faq-a-inner">No — and anyone who makes that guarantee is not being honest with you. Outcomes depend on timing, platform policies, the type of attack, and how quickly you act. What we guarantee is fast, professional, expert-guided response to give you the best possible chance of recovery.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How fast will someone respond to my request?<div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#5a7a95" stroke-width="1.5" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-a"><div class="faq-a-inner">During active operating hours, we aim to respond within minutes — not hours. Hot leads (active incidents) are routed immediately to an incident specialist. If your situation is active right now, use the WhatsApp button for the fastest possible connection.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is my information kept confidential?<div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#5a7a95" stroke-width="1.5" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Absolutely. All communications and case details are handled with strict confidentiality. We do not share, publish, or disclose your information to any third party. Your privacy is fundamental to how we operate — many of our clients are professionals, executives, and business owners who require complete discretion.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if I'm not sure whether I've been scammed or hacked?<div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#5a7a95" stroke-width="1.5" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-a"><div class="faq-a-inner">That's exactly why we start with an emergency assessment. If you suspect something is wrong — unusual account activity, suspicious messages sent from your account, funds you don't recognize moving — contact us immediately. It's always better to assess and find nothing than to wait and lose everything.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you engage in hacking or illegal activities to recover accounts?<div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#5a7a95" stroke-width="1.5" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Never. We operate entirely within legal and ethical boundaries. Our methods involve expert guidance on platform recovery processes, account security protocols, reporting to authorities, and documentation support. Anyone offering "illegal recovery" is running a secondary scam — and we are not that.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What types of scams and attacks do you handle?<div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#5a7a95" stroke-width="1.5" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-a"><div class="faq-a-inner">We handle: social media account takeovers (Instagram, Facebook, WhatsApp, TikTok), email compromise (personal and business), crypto and investment scams, romance scams, phishing attacks, business email fraud (BEC), impersonation attacks, ransomware incidents, and admin lockouts. If you're unsure — just reach out and describe what happened.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can you help if the incident happened days or weeks ago?<div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#5a7a95" stroke-width="1.5" stroke-linecap="round"/></svg></div></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes, though the options narrow with time. Older incidents are harder to resolve, but we can still help with documentation, platform appeals, legal reporting, and security hardening. Contact us regardless of when it happened — we'll be honest about what is still possible.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FORM ══ -->
+<section class="form-section" id="form">
+  <div class="form-wrap">
+    <div class="form-left">
+      <p class="eyebrow">Act now</p>
+      <h2 class="sec-h">Don't wait until it's too late</h2>
+      <p class="sec-p" style="margin-bottom:0;">If you've been hacked or scammed, acting immediately can make a measurable difference. Fill in the form — a specialist will contact you within minutes.</p>
+      <div class="reassure">
+        <div class="reassure-item">
+          <div class="reassure-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1L2 3.5V8c0 3.5 2.5 5.8 6 7 3.5-1.2 6-3.5 6-7V3.5L8 1z" stroke="#ff6b6b" stroke-width="1.3"/></svg></div>
+          <div class="reassure-text"><h4>Fully confidential</h4><p>All information handled with strict privacy. Never shared with third parties.</p></div>
+        </div>
+        <div class="reassure-item">
+          <div class="reassure-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#ff6b6b" stroke-width="1.3"/><path d="M8 4v4l3 2" stroke="#ff6b6b" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+          <div class="reassure-text"><h4>Minutes, not hours</h4><p>Hot leads (active incidents) routed to specialists immediately.</p></div>
+        </div>
+        <div class="reassure-item">
+          <div class="reassure-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#ff6b6b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="reassure-text"><h4>Honest and transparent</h4><p>No false guarantees. We tell you exactly what's possible for your case.</p></div>
+        </div>
+        <div class="reassure-item">
+          <div class="reassure-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="7" r="3" stroke="#ff6b6b" stroke-width="1.3"/><path d="M2.5 15c0-3 2.5-5.5 5.5-5.5s5.5 2.5 5.5 5.5" stroke="#ff6b6b" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+          <div class="reassure-text"><h4>Real human experts</h4><p>Not bots, not scripts. Qualified incident response professionals.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <div class="form-header">
+        <h2>Emergency Intake Form</h2>
+        <p>Describe your situation below. A specialist will review and contact you urgently.</p>
+      </div>
+
+      <!--
+        FORMSPREE SETUP:
+        1. Go to https://formspree.io — create free account
+        2. Create a new form — copy the ID (e.g. xpwzabcd)
+        3. Replace YOUR_FORM_ID below
+      -->
+      <form id="cyberForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Full name *</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email address *</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required>
+          </div>
+          <div class="field full">
+            <label for="phone">Phone number (strongly recommended)</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 000 000 0000">
+          </div>
+          <div class="field full">
+            <label for="incident">Incident type *</label>
+            <select id="incident" name="incident_type" required>
+              <option value="" disabled selected>Select your incident type</option>
+              <option>Account hacked (Instagram / Facebook / WhatsApp)</option>
+              <option>Account hacked (Email — personal)</option>
+              <option>Business email compromise</option>
+              <option>Crypto scam / fake investment</option>
+              <option>Romance scam with financial loss</option>
+              <option>Social engineering / phishing</option>
+              <option>Impersonation attack</option>
+              <option>Ransomware / business lockout</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="timing">When did this happen? *</label>
+            <select id="timing" name="timing" required>
+              <option value="" disabled selected>Select timeframe</option>
+              <option value="now">Happening right now — active incident</option>
+              <option value="24h">Within the last 24 hours</option>
+              <option value="week">Within the last week</option>
+              <option value="older">More than a week ago</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label>What is affected? (select all that apply)</label>
+            <div class="checks">
+              <label class="check-item"><input type="checkbox" name="impact" value="account_access"> Lost account access</label>
+              <label class="check-item"><input type="checkbox" name="impact" value="financial_loss"> Financial loss</label>
+              <label class="check-item"><input type="checkbox" name="impact" value="impersonation"> Active impersonation</label>
+              <label class="check-item"><input type="checkbox" name="impact" value="business"> Business disrupted</label>
+            </div>
+          </div>
+          <div class="field full">
+            <label for="desc">Describe what happened *</label>
+            <textarea id="desc" name="description" placeholder="Briefly describe the situation — what happened, what you noticed, and any steps you've already taken..." required></textarea>
+          </div>
+        </div>
+        <input type="hidden" name="_subject" value="🚨 New Cyber Emergency Lead — 911 Cyber Emergency">
+        <button type="submit" class="btn-submit">🚨 Start Emergency Response</button>
+        <p class="form-note">We do not guarantee recovery of lost funds or accounts. Results depend on timing and platform policies. We provide professional guidance and incident response support only.</p>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <div class="success-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5 11-11" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Request received</h3>
+        <p>A specialist will be in touch within minutes. If your situation is active right now, tap the WhatsApp button to connect immediately — don't wait.</p>
+        <!-- Replace 234XXXXXXXXXX with your number -->
+        <a href="https://wa.me/234XXXXXXXXXX?text=Hi%2C%20I%20just%20submitted%20the%20emergency%20form.%20I%20need%20urgent%20help." target="_blank" class="btn-primary" style="width:100%;justify-content:center;display:flex;margin-top:4px;">Open WhatsApp Now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DISCLAIMER ══ -->
+<div class="disclaimer-section">
+  <div class="dbox">
+    <h3>Important transparency — please read</h3>
+    <ul>
+      <li>We do not guarantee recovery of lost funds, crypto, or compromised accounts under any circumstances</li>
+      <li>Outcomes depend entirely on timing, platform policies, attack type, and case specifics</li>
+      <li>We provide professional guidance and active incident response support only</li>
+      <li>We do not engage in unauthorized, illegal, or any form of offensive hacking activities</li>
+      <li>Any service claiming guaranteed fund or account recovery is fraudulent — beware of secondary scams</li>
+      <li>Response times quoted are targets during active operating hours and are not contractual guarantees</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <p>© 2025 911 Cyber Emergency Service — Professional Incident Response — All communications are confidential and secure.</p>
+</footer>
+
+<!-- ══ WHATSAPP FLOAT ══ -->
+<!-- Replace 234XXXXXXXXXX with your WhatsApp number (country code + number, no +) -->
+<a class="wa-btn" href="https://wa.me/234XXXXXXXXXX?text=Hi%2C%20I%20need%20urgent%20cyber%20emergency%20help" target="_blank" aria-label="Chat on WhatsApp">
+  <span class="wa-label">Chat on WhatsApp</span>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ══ MOBILE STICKY ══ -->
+<div class="sticky-bar">
+  <a href="#form">🚨 Start Emergency Response</a>
+</div>
+
+<!-- ══ EXIT POPUP ══ -->
+<div class="overlay" id="exitOverlay">
+  <div class="popup">
+    <button class="popup-x" id="popupClose">×</button>
+    <h2>STILL NEED HELP?</h2>
+    <p>You may still have time to act. Don't let hesitation cost you recovery. Speak to a specialist directly on WhatsApp — no form needed.</p>
+    <div class="popup-actions">
+      <!-- Replace 234XXXXXXXXXX with your number -->
+      <a href="https://wa.me/234XXXXXXXXXX?text=Hi%2C%20I%20need%20urgent%20cyber%20emergency%20help" target="_blank" class="btn-primary" style="width:100%;justify-content:center;">Open WhatsApp Now →</a>
+      <a href="#form" class="btn-outline" style="width:100%;justify-content:center;" onclick="document.getElementById('exitOverlay').classList.remove('active')">Fill in Emergency Form</a>
+    </div>
+  </div>
+</div>
+
+<!--
+  TAWK.TO LIVE CHAT
+  Replace YOUR_TAWKTO_ID and YOUR_TAWKTO_WIDGET with your Tawk.to values.
+  Get these from: https://dashboard.tawk.to → Administration → Chat Widget
+-->
+<script>
+var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/YOUR_TAWKTO_ID/YOUR_TAWKTO_WIDGET';
+s1.charset='UTF-8';s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+// Auto-trigger message after 8 seconds
+setTimeout(function(){
+  if(typeof Tawk_API !== 'undefined' && Tawk_API.maximize){
+    Tawk_API.setAttributes({'greeting':'Hi — did something just happen to your account or funds? I can connect you to an expert right now.'},{});
+  }
+}, 8000);
+</script>
+
+<script>
+/* ── GEO DYNAMIC HEADLINE ── */
+(function(){
+  try{
+    fetch('https://ipapi.co/json/')
+      .then(function(r){return r.json();})
+      .then(function(d){
+        if(d && d.country_name){
+          var el = document.getElementById('heroGeo');
+          if(el) el.textContent = 'IN ' + d.country_name.toUpperCase() + '?';
+        }
+      }).catch(function(){});
+  }catch(e){}
+})();
+
+/* ── FORM SUBMISSION ── */
+var form = document.getElementById('cyberForm');
+if(form){
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var fd = new FormData(form);
+    var timing = fd.get('timing');
+
+    /* Meta Pixel */
+    if(typeof fbq !== 'undefined'){
+      fbq('track','Lead',{content_name:'CyberEmergencyLead',content_category:timing==='now'?'HOT':'WARM'});
+    }
+    /* Google Ads conversion */
+    if(typeof gtag !== 'undefined'){
+      gtag('event','conversion',{'send_to':'AW-CONVERSION_ID/AW-CONVERSION_LABEL'});
+    }
+
+    fetch(form.action,{method:'POST',body:fd,headers:{'Accept':'application/json'}})
+      .then(function(res){
+        form.style.display='none';
+        document.getElementById('formSuccess').style.display='block';
+        document.getElementById('formSuccess').scrollIntoView({behavior:'smooth',block:'center'});
+      })
+      .catch(function(){
+        form.style.display='none';
+        document.getElementById('formSuccess').style.display='block';
+      });
+  });
+}
+
+/* ── FAQ ACCORDION ── */
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    var item = this.closest('.faq-item');
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});
+    if(!wasOpen) item.classList.add('open');
+  });
+});
+
+/* ── EXIT INTENT ── */
+var exitShown = false;
+document.addEventListener('mouseleave',function(e){
+  if(!exitShown && e.clientY < 20){
+    exitShown = true;
+    document.getElementById('exitOverlay').classList.add('active');
+  }
+});
+document.getElementById('popupClose').addEventListener('click',function(){
+  document.getElementById('exitOverlay').classList.remove('active');
+});
+document.getElementById('exitOverlay').addEventListener('click',function(e){
+  if(e.target===this) this.classList.remove('active');
+});
+
+/* ── SMOOTH SCROLL ── */
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var t = document.querySelector(this.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+</script>
+
+</body>
+</html>
