@@ -1,0 +1,23 @@
+{
+  "name": "911-cyber-emergency",
+  "version": "1.0.0",
+  "description": "911 Cyber Emergency — Immediate Expert Incident Response",
+  "main": "911cyber-v2-FULL.html",
+  "scripts": {
+    "build": "npm run validate",
+    "validate": "node scripts/validate.js",
+    "dev": "python3 -m http.server 8000",
+    "start": "npm run dev",
+    "vercel-build": "npm run build && npm run validate"
+  },
+  "keywords": [
+    "cyber-security",
+    "emergency",
+    "incident-response"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
